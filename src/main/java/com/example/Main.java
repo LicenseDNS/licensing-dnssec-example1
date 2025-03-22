@@ -33,6 +33,11 @@ public class Main {
                 System.out.println("INVALID REQUEST, connection problem etc");
             }
 
+            try {
+                Thread.sleep(5000L); // wait 5 seconds
+            } catch (InterruptedException ex) {
+            }
+            
             // DEACTIVATE
             List<String> licenseTXT2 = LicenseData.deactivate(LICENSE_KEY, PRODUCT_ID);
             if (licenseTXT2 != null) {
